@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ep2 Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style type="text/css">
+      #kotak {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        transition: background-color 1s;
+        margin: 10px;
+      }
+
+      .lingkaran {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        border-radius: 50%;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kotak"></div>
+    <div class="lingkaran"></div>
+    <div class="lingkaran"></div>
+
+    <script type="text/javascript">
+      $("#kotak").click(function () {
+        alert("kotak");
+        $(this).css("background-color", "green");
+      });
+
+      $(".lingkaran").click(function () {
+        $(this).css("background-color", "yellow");
+        alert("lingkaran");
+      });
+    </script>
+  </body>
+</html>
