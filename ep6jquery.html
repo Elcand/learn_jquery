@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ep6 Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <style type="text/css">
+    .kotak {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transition: background-color 1s;
+      margin: 10px;
+      position: absolute;
+    }
+  </style>
+  <body>
+    <button>Animation</button>
+    <div class="kotak"></div>
+
+    <script type="text/javascript">
+      $("button").click(function () {
+        //  $(".kotak").animate({ left: "250px", width: "250px", height: "250px" });
+        $(".kotak").animate({ left: "250px" });
+        $(".kotak").animate({ width: "250px" });
+        $(".kotak").animate({ height: "250px" });
+        $(".kotak").animate({ borderRadius: "50%" });
+      });
+    </script>
+  </body>
+</html>
