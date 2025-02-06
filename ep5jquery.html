@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ep5 Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <style>
+    .kotak {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transition: background-color 1s;
+      margin: 10px;
+    }
+
+    .border {
+      border-radius: 50%;
+      color: red;
+    }
+
+    .gray {
+      color: gray;
+    }
+  </style>
+  <body>
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+
+    <script type="text/javascript">
+      $("button").click(function () {
+        $(this).hide();
+      });
+    </script>
+  </body>
+</html>
