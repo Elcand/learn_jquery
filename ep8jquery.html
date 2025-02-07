@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ep8 Ajax</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <button onclick="showJoke()">Show Joke</button>
+    <br>
+    <br>git 
+    <dev id="feed"></dev>
+
+    <script type="text/javascript">
+      function showJoke() {
+        var xhr =new XMLHttpRequest();
+        
+        xhr.open('GET', 'https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single')
+        
+        xhr.send();
+
+        xhr.onload = function() {
+
+          if(xhr.status == 200){
+            console.log('okee!!');
+
+            var apirespone = JSON.parse(this.response); // memberi respon pada button/komponen yg kita buat
+            console.log(apirespone);  
+
+            var displayJoke = document.createElement('div'); // untuk menampilkan data joke dalam html(div bisa pake id/ class) kita
+            displayJoke.innerHTML = apirespone.joke; // kalo ingin menampilkan data sekalin joke cukup ganti .joke pada apirespon menjadi .sesuai_keinginan kita
+            $('#feed').html(displayJoke);
+          } 
+
+        }
+      }
+    </script>
+
+  </body>
+</html>
