@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ep9 addEventListener</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #kotak {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      background-color: red;
+    }
+  </style>
+</head>
+<html>
+
+<body>
+
+  <div id="kotak"></div>
+
+  <script>
+
+    $(document).keydown(function () {
+      console.log(event);
+      alert('habis pencet: ' + event.key); // kalo mau lihat kita abis mencet apa 'pake + event.key'
+    })
+
+    // $(document).keydown(myfunction); // kalo kita memiliki banyak function/ function kita sendiri
+
+    // function myFunction() {
+    //   console.log(event);
+    //   alert('habis pencet: ' + event.key);
+    // };
+  </script>
+
+</body>
+
+</html>
